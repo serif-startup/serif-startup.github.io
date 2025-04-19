@@ -2,6 +2,21 @@
   COMMON css 
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: 'Colonna';
+  src: url('../fonts/BAUHS93.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#logo {
+  font-family: 'Colonna', sans-serif;
+  font-size: 75px;
+  font-weight: normal;
+  color: #3498db;
+}
+
 :root {
   --font: "Inter", sans-serif;
   --body-color: #637381;
@@ -527,7 +542,7 @@ p {
 .ud-hero-content .ud-hero-title {
   color: var(--white);
   font-weight: 700;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 60px;
   text-align: center;
   margin-bottom: 30px;
