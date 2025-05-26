@@ -1,9 +1,11 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TeamSection = () => {
   const [showMeme, setShowMeme] = useState(false);
+  const { t } = useLanguage();
   
   const teamMembers = [
     {
@@ -40,9 +42,9 @@ const TeamSection = () => {
     <section id="team" className="section-padding bg-slate-50 dark:bg-gray-800">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">About Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">{t('aboutUsTeam')}</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            The dream team
+            {t('dreamTeam')}
           </p>
         </div>
 
@@ -72,7 +74,7 @@ const TeamSection = () => {
             onMouseLeave={() => setShowMeme(false)}
           >
             <p className="text-lg font-semibold text-gray-700 dark:text-gray-200 italic">
-              "Trust me I'm an Engineer"
+              "{t('trustMe')}"
             </p>
             {showMeme && (
               <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 z-50 w-80 shadow-xl rounded-lg overflow-hidden transition-all duration-300 ease-in-out">

@@ -1,3 +1,9 @@
+/* Add Cormorant-SC font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+/* Add Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -83,7 +89,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', serif;
   }
 
   html {
@@ -103,7 +109,22 @@
   .gradient-bg {
     @apply bg-gradient-to-br from-serif-blue via-serif-blue/95 to-serif-blue/90;
   }
+  
+  /* Logo animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .serif-logo-animated .magnifier {
+    transition: transform 0.3s ease-out;
+  }
 }
-
-/* Add Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');

@@ -6,8 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, MapPin, Send } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -38,7 +40,7 @@ const ContactSection = () => {
       emailjs.sendForm('service_nxdvcml', 'contact_form', formRef.current)
         .then(() => {
           toast({
-            title: "Message Sent!",
+            title: t('messageSent'),
             description: "We've received your message and will respond shortly.",
           });
           
@@ -53,7 +55,7 @@ const ContactSection = () => {
         .catch((error) => {
           console.error('FAILED...', error);
           toast({
-            title: "Error Sending Message",
+            title: t('messageFailed'),
             description: "There was a problem sending your message. Please try again.",
             variant: "destructive"
           });
@@ -66,10 +68,9 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">{t('contactUs')}</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            Have questions or interested in learning more about our services? 
-            Get in touch with us and we'll be happy to help.
+            {t('contactDesc')}
           </p>
         </div>
 
@@ -81,8 +82,8 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-serif-teal" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">Email Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-2">For general inquiries:</p>
+                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">{t('emailUs')}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-2">{t('forInquiries')}</p>
                   <a href="mailto:info@serifai.eu" className="text-serif-teal hover:underline">info@serifai.eu</a>
                 </div>
               </div>
@@ -94,8 +95,8 @@ const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-serif-teal" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">Our Location</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Based in Milan</p>
+                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">{t('ourLocation')}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{t('basedIn')}</p>
                 </div>
               </div>
             </div>
@@ -108,13 +109,13 @@ const ContactSection = () => {
               onSubmit={handleSubmit} 
               className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border dark:border-gray-700"
             >
-              <h3 className="text-xl font-semibold mb-6 text-serif-blue dark:text-white">Send Us a Message</h3>
+              <h3 className="text-xl font-semibold mb-6 text-serif-blue dark:text-white">{t('send')}</h3>
               
               <div className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                      Your Name
+                      {t('yourName')}
                     </label>
                     <Input
                       id="name"
@@ -123,12 +124,12 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full dark:bg-gray-700 dark:border-gray-600"
-                      placeholder="Your Name"
+                      placeholder={t('yourName')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                      Your Email
+                      {t('yourEmail')}
                     </label>
                     <Input
                       id="email"
@@ -145,7 +146,7 @@ const ContactSection = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Message
+                    {t('message')}
                   </label>
                   <Textarea
                     id="message"
@@ -155,7 +156,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full dark:bg-gray-700 dark:border-gray-600"
-                    placeholder="Your message here..."
+                    placeholder={`${t('message')}...`}
                   />
                 </div>
                 
@@ -175,7 +176,7 @@ const ContactSection = () => {
                   ) : (
                     <span className="flex items-center">
                       <Send className="mr-2 h-4 w-4" />
-                      Send Message
+                      {t('send')}
                     </span>
                   )}
                 </Button>

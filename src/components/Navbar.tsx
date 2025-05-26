@@ -1,12 +1,15 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
+import SerifLogo from './SerifLogo';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +27,11 @@ const Navbar = () => {
   }, []);
   
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Mission', href: '#mission' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' }
+    { name: t('home'), href: '#hero' },
+    { name: t('about'), href: '#about' },
+    { name: t('mission'), href: '#mission' },
+    { name: t('team'), href: '#team' },
+    { name: t('contact'), href: '#contact' }
   ];
 
   return (
@@ -37,30 +40,31 @@ const Navbar = () => {
         isScrolled ? 'bg-white dark:bg-gray-900 shadow-md py-2' : 'bg-transparent dark:bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex-shrink-0">
           <a href="#hero" className="flex items-center">
-            <div className="text-serif-blue dark:text-white mr-2">
-              <Search size={28} className="inline-block" />
-            </div>
-            <span className="text-xl font-bold text-serif-blue dark:text-white">Serif</span>
+            <SerifLogo size={46} className="mr-2" />
+            <span className="text-5xl font-bold text-serif-blue dark:text-white font-['Cormorant_SC']">Serif</span>
           </a>
         </div>
         
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-serif-blue dark:hover:text-white transition-colors duration-300 font-medium"
-            >
-              {link.name}
-            </a>
-          ))}
+        {/* Desktop Menu - Properly centered */}
+        <div className="hidden md:flex items-center justify-center flex-1 px-6">
+          <div className="flex space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-gray-700 dark:text-gray-300 hover:text-serif-blue dark:hover:text-white transition-colors duration-300 font-medium"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
         
-        {/* Call to Action Button and Theme Toggle */}
+        {/* Call to Action Button, Language Switcher, and Theme Toggle */}
         <div className="hidden md:flex items-center space-x-3">
           <Button asChild className="bg-serif-teal hover:bg-serif-teal/90">
             <a 
@@ -68,14 +72,16 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Take Survey
+              {t('takeSurvey')}
             </a>
           </Button>
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
         
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-3">
+        <div className="md:hidden flex items-center space-x-3 ml-auto">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -114,12 +120,12 @@ const Navbar = () => {
             ))}
             <Button asChild className="w-full mt-2 bg-serif-teal hover:bg-serif-teal/90">
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdJ93_FewVC54ASBNt9MAlUp4lgUg4WJkVZU7SYx1ivB5oWSw/viewform" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe87e569hyTGlgu5EsJzcgSbebtvBSSo3EmoAQm12WIaojcuA/viewform?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Take Survey
+                {t('takeSurvey')}
               </a>
             </Button>
           </div>

@@ -1,4 +1,4 @@
-
+// components/ThemeToggle.tsx
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,14 @@ const ThemeToggle = () => {
       root.classList.remove("dark");
     }
     localStorage.setItem("theme", theme);
+
+    // --- NEW: Dispatch a custom event when theme changes ---
+    if (typeof window !== "undefined") {
+      const event = new CustomEvent('themeChange', { detail: { newTheme: theme } });
+      window.dispatchEvent(event);
+    }
+    // --- END NEW ---
+
   }, [theme]);
 
   const toggleTheme = () => {
@@ -26,9 +34,9 @@ const ThemeToggle = () => {
   };
 
   return (
-    <Button 
-      variant="outline" 
-      size="icon" 
+    <Button
+      variant="outline"
+      size="icon"
       onClick={toggleTheme}
       className="rounded-full bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 border-gray-200 dark:border-gray-700"
       aria-label="Toggle theme"

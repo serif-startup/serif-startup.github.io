@@ -1,29 +1,32 @@
 
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
+import SerifLogo from './SerifLogo';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="hero" className="relative pt-28 pb-20 md:py-36 overflow-hidden bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 md:space-y-8">
             <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-serif-teal/10 text-serif-teal dark:bg-serif-teal/20 dark:text-serif-teal animate-fade-in">
-              <span className="mr-1">✨</span> Transforming Italian public data
+              <span className="mr-1">✨</span> {t('transformingData')}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-serif-blue dark:text-white leading-tight animate-fade-in">
-              Political knowledge at <span className="text-serif-teal">chat time</span>
+              {t('heroTitle')} <span className="text-serif-teal">{t('heroTitleHighlight')}</span>
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 md:text-xl animate-fade-in">
-              Your needs matter! Share your opinion and help us revolutionise access to political information by building a tailor-made platform for professionals and citizens. Fill in the survey below, it only takes a couple of minutes
+              {t('heroDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in">
               <Button asChild size="lg" className="bg-serif-blue hover:bg-serif-blue/90 text-white">
-                <a href="#about">Learn More</a>
+                <a href="#about">{t('learnMore')}</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-serif-teal text-serif-teal hover:bg-serif-teal/10 dark:border-serif-teal dark:text-serif-teal dark:hover:bg-serif-teal/20 dark:bg-gray-700/50">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSe87e569hyTGlgu5EsJzcgSbebtvBSSo3EmoAQm12WIaojcuA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Take our Survey
+                  {t('takeOurSurvey')}
                 </a>
               </Button>
             </div>
@@ -33,22 +36,27 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-serif-blue/5 dark:bg-serif-blue/10 animate-pulse"></div>
               <div className="absolute inset-4 rounded-full bg-serif-blue/10 dark:bg-serif-blue/20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <Search size={120} className="text-serif-blue/80 dark:text-serif-blue/90" />
+                <SerifLogo size={180} animated={true} className="text-serif-blue/80 dark:text-serif-blue/90" />
               </div>
               
-              {/* Floating elements */}
+              {/* Floating elements with Serif's Goals */}
               <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg animate-float">
-                <div className="text-sm font-bold dark:text-white">Real-time Analytics</div>
+                <div className="text-sm font-bold dark:text-white">{t('aiChatbot')}</div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg animate-float" style={{
                 animationDelay: '1s'
               }}>
-                <div className="text-sm font-bold dark:text-white">AI Chatbots</div>
+                <div className="text-sm font-bold dark:text-white">{t('customReports')}</div>
               </div>
               <div className="absolute top-1/2 -right-8 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg animate-float" style={{
                 animationDelay: '2s'
               }}>
-                <div className="text-sm font-bold dark:text-white">Policy Simulations</div>
+                <div className="text-sm font-bold dark:text-white">{t('factChecking')}</div>
+              </div>
+              <div className="absolute bottom-1/3 -left-8 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg animate-float" style={{
+                animationDelay: '1.5s'
+              }}>
+                <div className="text-sm font-bold dark:text-white">{t('policySim')}</div>
               </div>
             </div>
           </div>
