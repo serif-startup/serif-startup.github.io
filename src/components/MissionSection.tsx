@@ -9,15 +9,15 @@ const MissionSection = () => {
     <section id="mission" className="section-padding bg-slate-50 dark:bg-gray-800 pt-0">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 id="mission-title" className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4 py-[30px]">{t('missionTitle')}</h2>
+          <h2 id="mission-title" className="text-3xl md:text-6xl font-bold text-serif-blue dark:text-white mb-4 py-[30px]">{t('missionTitle')}</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-2xl text-gray-700 dark:text-gray-300 mb-6">
               {t('missionDesc1')}
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
+            <p className="text-2xl text-gray-700 dark:text-gray-300">
               {t('missionDesc2')}
             </p>
           </div>

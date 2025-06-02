@@ -115,7 +115,7 @@ export const translations = {
     
     // Mission Section
     missionTitle: "Mission di Serif",
-    missionDesc1: "Promuovere decisioni migliori con i dati migliori migliorando la trasparenza attraverso la tecnologia. La nostra missione è rendere i dati governativi non solo accessibili, ma anche realmente utili attraverso l'analisi basata sull'intelligenza artificiale.",
+    missionDesc1: "Promuovere decisioni consapevoli grazie ai dati migliorando la trasparenza attraverso la tecnologia. La nostra missione è rendere i dati governativi non solo accessibili, ma anche realmente utili attraverso l'analisi fornita dall'intelligenza artificiale.",
     missionDesc2: "Crediamo che informazioni governative accurate e accessibili siano essenziali per una democrazia funzionante e per una cittadinanza informata.",
     
     // Team Section
@@ -135,7 +135,7 @@ export const translations = {
     messageFailed: "Invio del messaggio fallito. Per favore riprova.",
     
     // Footer
-    footerDescription: "Trasformare i dati pubblici italiani in informazioni utili attraverso l'analisi basata sull'intelligenza artificiale.",
+    footerDescription: "Trasformare i dati pubblici italiani in informazioni utili attraverso l'analisi fornita dalla IA",
     allRights: "Tutti i Diritti Riservati",
     quickLinks: "Link Rapidi",
     legal: "Legale",
@@ -153,7 +153,7 @@ export const translations = {
     
     // Goals
     serifsGoals: "Obiettivi di Serif",
-    nextStep: "Il prossimo passo avanti lo faremo insieme grazie alle nostre funzionalità",
+    nextStep: "Il prossimo passo avanti lo faremo insieme, grazie alle nostre funzionalità",
     aiChatbot: "Chatbot",
     customReports: "Report Personalizzati",
     aiChatbotDesc: "Chatbot intelligente che comprende il linguaggio naturale e cerca rapidamente informazioni aggiornate da fonti pubbliche ufficiali (ad es. Gazzetta Ufficiale, circolari, documenti contabili, discorsi in Parlamento).",

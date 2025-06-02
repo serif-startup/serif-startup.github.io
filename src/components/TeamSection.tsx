@@ -42,8 +42,8 @@ const TeamSection = () => {
     <section id="team" className="section-padding bg-slate-50 dark:bg-gray-800">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">{t('aboutUsTeam')}</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <h2 className="text-3xl md:text-6xl font-bold text-serif-blue dark:text-white mb-4">{t('aboutUsTeam')}</h2>
+          <p className="text-2xl text-gray-700 dark:text-gray-300">
             {t('dreamTeam')}
           </p>
         </div>

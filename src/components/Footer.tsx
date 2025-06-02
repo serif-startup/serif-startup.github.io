@@ -1,7 +1,8 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import SerifLogo from "./SerifLogo";
-import { FaInstagram, FaFacebook, FaReddit, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaReddit, FaLinkedin, FaTiktok, FaGithub } from "react-icons/fa";
+import SerifLogoFooter from "./SerifLogoFooter";
 
 
 const Footer = () => {
@@ -14,8 +15,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <SerifLogo size={55} className="mr-2 text-white" />
-              <span className="text-3xl font-bold font-['Cormorant_SC']">Serif</span>
+              {/* <SerifLogo size={55} className="mr-2 text-white" /> */}
+              <SerifLogoFooter size={60} className="mr-2 text-white" />
+              <span className="text-4xl font-bold font-['Cormorant_SC']">Serif</span>
             </div>
             <p className="text-white/80 mb-6 max-w-md">
               {t('footerDescription')}
@@ -52,6 +54,14 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />
+              </a>
+              <a 
+                href="https://www.github.com/serifai"
+                target="_blank"
+                className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
+                aria-label="GitHub"
+              >
+                <FaGithub size={20} />
               </a>
               {/* <a 
                 href="#" 

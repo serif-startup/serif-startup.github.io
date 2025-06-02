@@ -33,8 +33,8 @@ const AboutSection = () => {
     <section id="about" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">{t('serifsGoals')}</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">{t('nextStep')}</p>
+          <h2 className="text-3xl md:text-6xl font-bold text-serif-blue dark:text-white mb-4">{t('serifsGoals')}</h2>
+          <p className="text-2xl text-gray-700 dark:text-gray-300">{t('nextStep')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -45,8 +45,8 @@ const AboutSection = () => {
                   <div className="rounded-full bg-serif-teal/10 p-3 inline-flex mb-4 group-hover:bg-serif-teal/20 transition-colors">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-serif-blue dark:text-white">{feature.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                  <h3 className="text-2xl font-semibold mb-3 text-serif-blue dark:text-white">{feature.title}</h3>
+                  <p className="text-md text-gray-600 dark:text-gray-300">{feature.description}</p>
                 </CardContent>
               </Card>
             </div>

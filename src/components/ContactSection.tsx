@@ -68,8 +68,8 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-serif-blue dark:text-white mb-4">{t('contactUs')}</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <h2 className="text-3xl md:text-6xl font-bold text-serif-blue dark:text-white mb-4">{t('contactUs')}</h2>
+          <p className="text-2xl text-gray-700 dark:text-gray-300">
             {t('contactDesc')}
           </p>
         </div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-serif-teal" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">{t('emailUs')}</h3>
+                  <h3 className="text-xl font-semibold text-serif-blue dark:text-white mb-1">{t('emailUs')}</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-2">{t('forInquiries')}</p>
                   <a href="mailto:info@serifai.eu" className="text-serif-teal hover:underline">info@serifai.eu</a>
                 </div>
@@ -95,7 +95,7 @@ const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-serif-teal" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-serif-blue dark:text-white mb-1">{t('ourLocation')}</h3>
+                  <h3 className="text-xl font-semibold text-serif-blue dark:text-white mb-1">{t('ourLocation')}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{t('basedIn')}</p>
                 </div>
               </div>
