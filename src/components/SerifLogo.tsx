@@ -54,7 +54,7 @@ const SerifLogo = ({ size = 80, className = '' }: SerifLogoProps) => {
       <defs />
       <g
         transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-        fill="#4a90e2ff" // dark mode logo color
+        fill="#63a5e9ff" // dark mode logo color (lightened)
         stroke="none"
       >
         <path
