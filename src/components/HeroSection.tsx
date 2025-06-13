@@ -33,8 +33,8 @@ const HeroSection = () => {
           </div>
           <div className="hidden md:flex justify-center relative animate-float">
             <div className="w-72 h-72 lg:w-96 lg:h-96 relative">
-              <div className="absolute inset-0 rounded-full bg-serif-blue/5 dark:bg-serif-blue/10 animate-pulse"></div>
-              <div className="absolute inset-4 rounded-full bg-serif-blue/10 dark:bg-serif-blue/20"></div>
+              <div className="absolute inset-0 rounded-full bg-serif-blue/5 dark:bg-serif-blue/15 animate-pulse"></div>
+              <div className="absolute inset-4 rounded-full bg-serif-blue/10 dark:bg-serif-blue/25"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <SerifLogo size={180} animated={true} className="text-serif-blue/80 dark:text-serif-blue/90" />
               </div>
