@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, FileText, CheckCircle, Layers } from "lucide-react";
+import { MessageCircle, FileText, CheckCircle, Layers, FileCog } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
@@ -12,6 +12,11 @@ const AboutSection = () => {
       title: t('aiChatbot'),
       description: t('aiChatbotDesc')
     }, 
+    {
+      icon: <FileCog className="h-6 w-6 text-serif-teal" />,
+      title: t('aiSummary'),
+      description: t('aiSummaryDesc')
+    },
     {
       icon: <FileText className="h-6 w-6 text-serif-teal" />,
       title: t('customReports'),
@@ -37,7 +42,7 @@ const AboutSection = () => {
           <p className="text-2xl text-gray-700 dark:text-gray-300">{t('nextStep')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-start" data-aos="fade-up" data-aos-delay={100 * index}>
               <Card className="w-full h-full card-effect group dark:bg-gray-800 dark:border-gray-700">
@@ -45,7 +50,7 @@ const AboutSection = () => {
                   <div className="rounded-full bg-serif-teal/10 p-3 inline-flex mb-4 group-hover:bg-serif-teal/20 transition-colors">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-3 text-serif-blue dark:text-white">{feature.title}</h3>
+                  <h3 className="text-md font-semibold mb-3 text-serif-blue dark:text-white">{feature.title}</h3>
                   <p className="text-md text-gray-600 dark:text-gray-300">{feature.description}</p>
                 </CardContent>
               </Card>

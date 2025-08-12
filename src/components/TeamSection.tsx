@@ -13,28 +13,28 @@ const TeamSection = () => {
       name: "Alessandro Mariotti",
       role: "CEO",
       bio: "Automation Engineer & Political Scientist",
-      image: "/lovable-uploads/alessandro.jpeg"
+      image: "/lovable-uploads/alessandro.jpg"
     },
     {
       id: 2,
       name: "Romeo Odajiu",
       role: "CPO",
       bio: "Computer Science Engineer",
-      image: "/lovable-uploads/romeo.jpeg"
+      image: "/lovable-uploads/romeo.jpg"
     },
     {
       id: 3,
       name: "Adam Amer",
       role: "CRO",
       bio: "Social Scientist & AI Engineer",
-      image: "/lovable-uploads/adam.jpeg"
+      image: "/lovable-uploads/adam.jpg"
     },
     {
       id: 4,
       name: "Simone Spreafico",
       role: "CTO",
       bio: "Cybersecurity Specialist",
-      image: "/lovable-uploads/simone.jpeg"
+      image: "/lovable-uploads/simone.jpg"
     }
   ];
 

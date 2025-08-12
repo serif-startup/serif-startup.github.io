@@ -80,6 +80,8 @@ export const translations = {
     customReports: "Custom Reports",
     aiChatbotDesc: "Intelligent chatbot that understands natural language and quickly searches for up-to-date information from official public sources (e.g. Official Gazette, circulars, accounting documents, speeches in Parliament).",
     customReportsDesc: "Generation of customised reports and documents, with choice of format, font, attachments, priority, and proactive suggestions to enrich content with verified information.",
+    aiSummary: "AI Summary",
+    aiSummaryDesc: "An AI-powered platform that transforms complex public political data into clear, concise summaries. By analyzing official records, reports, and legislative updates, it delivers timely insights that help users quickly understand policy developments and trends.",
   },
   it: {
     // Navbar
@@ -158,6 +160,8 @@ export const translations = {
     customReports: "Report Personalizzati",
     aiChatbotDesc: "Chatbot intelligente che comprende il linguaggio naturale e cerca rapidamente informazioni aggiornate da fonti pubbliche ufficiali (ad es. Gazzetta Ufficiale, circolari, documenti contabili, discorsi in Parlamento).",
     customReportsDesc: "Generazione di report e documenti personalizzati, con scelta di formato, font, allegati, priorità e suggerimenti proattivi per arricchire i contenuti con informazioni verificate.",
+    aiSummary: "Riassunti",
+    aiSummaryDesc: "Una piattaforma basata sull’intelligenza artificiale che trasforma complessi dati politici pubblici in sintesi chiare e concise. Analizzando registri ufficiali, rapporti e aggiornamenti legislativi, fornisce approfondimenti tempestivi per comprendere rapidamente sviluppi e tendenze politiche.",
   }
 };
 
